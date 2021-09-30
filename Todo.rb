@@ -32,8 +32,6 @@ class Todo
      Date.today < @due_date
   end
 
-
-
   def to_displayable_string
     todo_status = @completed ? "[x]" : "[ ]"
     todo_date = @due_date == Date.today ? nil : @due_date.to_s
