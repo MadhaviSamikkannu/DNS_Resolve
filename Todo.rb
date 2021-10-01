@@ -2,14 +2,14 @@ require "date"
 
 class Todo
 
-  def initialize(str, due_date, completed)
-    @str = str
+  def initialize(todo_text, due_date, completed)
+    @todo_text = todo_text
     @due_date = due_date
     @completed = completed
   end
 
-  def str
-    return @str
+  def todo_text
+    return @todo_text
   end
 
   def due_date
@@ -32,10 +32,12 @@ class Todo
      Date.today < @due_date
   end
 
+
+
   def to_displayable_string
     todo_status = @completed ? "[x]" : "[ ]"
     todo_date = @due_date == Date.today ? nil : @due_date.to_s
-    "#{todo_status} #{@str} #{todo_date}"
+    "#{todo_status} #{@todo_text} #{todo_date}"
   end
 end
 
