@@ -13,15 +13,15 @@ class Todo
   end
 
   def due_date
-    return @due_date
+     @due_date
   end
 
   def completed
-    return @completed
+     @completed
   end
 
   def due_today?
-     Date.today == @due_date
+    Date.today == @due_date
   end
 
   def overdue?
